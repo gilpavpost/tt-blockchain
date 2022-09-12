@@ -14,3 +14,53 @@ a {
 * {
   box-sizing: border-box;
 }
+
+section {
+  display: flex;
+  height: 100vh;
+  gap: 30px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  margin-top: 10px;
+  height: 40px;
+  border: 1px solid #a6b0bf;
+  border-radius: 5px;
+  width: 240px;
+  padding-left: 15px;
+  font-size: 20px;
+}
+input::placeholder {
+  color: #a6b0bf;
+  font-size: 1em;
+}
+label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.underText {
+  display: inline-flex;
+  font-size: 10px;
+  color: #a6b0bf;
+  margin: 0;
+  margin-bottom: 10px;
+}
+button {
+  border: none;
+  background-color: #f7f9fb;
+  height: 30px;
+  width: 240px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #a6b0bf;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

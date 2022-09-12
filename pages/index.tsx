@@ -25,7 +25,7 @@ function Home() {
       <header>
         <nav>
           <Link href="/">
-            <a>next-web3-boilerplate</a>
+            <a>next-app</a>
           </Link>
 
           <Account triedToEagerConnect={triedToEagerConnect} />
@@ -33,18 +33,38 @@ function Home() {
       </header>
 
       <main>
-        <h1>
-          Welcome to{" "}
-          <a href="https://github.com/mirshko/next-web3-boilerplate">
-            next-web3-boilerplate
-          </a>
-        </h1>
+        <h1></h1>
 
         {isConnected && (
           <section>
-            <ETHBalance />
-
-            <TokenBalance tokenAddress={DAI_TOKEN_ADDRESS} symbol="DAI" />
+            <div>
+              <form>
+                <label>
+                  Provide Tokens <br />
+                  <input type="text" placeholder="Amount" name="inputProvide" />
+                </label>
+                <p className="underText">
+                  <ETHBalance />
+                </p>
+                <button type="submit"> Provide</button>
+              </form>
+            </div>
+            <div>
+              <form>
+                <label>
+                  Withdraw Tokens <br />
+                  <input
+                    type="text"
+                    placeholder="Amount"
+                    name="inputWithdraw"
+                  />
+                </label>
+                <p className="underText">
+                  <ETHBalance />
+                </p>
+                <button type="submit"> Withdraw</button>
+              </form>
+            </div>
           </section>
         )}
       </main>
