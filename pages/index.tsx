@@ -21,21 +21,8 @@ function Home() {
         <title>next-web3-boilerplate</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <header>
-        <nav>
-          <Link href="/">
-            <a>next-app</a>
-          </Link>
-
-          <Account triedToEagerConnect={triedToEagerConnect} />
-        </nav>
-      </header>
-
       <main>
-        <h1></h1>
-
-        {isConnected && (
+        {isConnected ? (
           <section>
             <div>
               <form>
@@ -66,6 +53,11 @@ function Home() {
               </form>
             </div>
           </section>
+        ): (
+          <section>
+                      <Account triedToEagerConnect={triedToEagerConnect} />
+          </section>
+
         )}
       </main>
 
